@@ -4,5 +4,10 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [tailwindcss(),react()],
+  plugins: [tailwindcss(), react()],
+  preview: {
+    host: '0.0.0.0',
+    port: process.env.PORT || 5173,
+    allowedHosts: ['tapi-chemical.onrender.com', 'localhost'],
+  },
 })
